@@ -1,33 +1,176 @@
-<section class="products">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<div class="card">
-<img src="assets/images/iphone15.jpg" alt="iPhone 15">
-<h3>iPhone 15</h3>
-<p>₦950,000</p>
-<button onclick="addToCart('iPhone 15',950000,'assets/images/iphone15.jpg')">Add to Cart</button>
-</div>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
 
-<div class="card">
-<img src="assets/images/samsung-phone.jpg" alt="Samsung Galaxy S24">
-<h3>Samsung Galaxy S24</h3>
-<p>₦870,000</p>
-<button onclick="addToCart('Samsung Galaxy S24',870000,'assets/images/samsung-phone.jpg')">Add to Cart</button>
-</div>
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-<div class="card">
-<img src="assets/images/macbook.jpg" alt="MacBook Pro">
-<h3>MacBook Pro</h3>
-<p>₦1,200,000</p>
-<button onclick="addToCart('MacBook Pro',1200000,'assets/images/macbook.jpg')">Add to Cart</button>
-</div>
+header h1 {
+  font-size: 1.8rem;
+}
 
-<div class="card">
-<img src="assets/images/lenovo-laptop.jpg" alt="Lenovo ThinkPad">
-<h3>Lenovo ThinkPad</h3>
-<p>₦820,000</p>
-<button onclick="addToCart('Lenovo ThinkPad',820000,'assets/images/lenovo-laptop.jpg')">Add to Cart</button>
-</div>
+nav {
+  display: flex;
+  gap: 2rem;
+}
 
-</section>
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
 
-<script src="js/cart.js"></script>
+nav a:hover {
+  opacity: 0.8;
+}
+
+.badge {
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff5252;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  padding: 1rem 1rem 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.card p {
+  padding: 0 1rem;
+  color: #667eea;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card button {
+  margin: 1rem;
+  padding: 0.8rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #764ba2;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
