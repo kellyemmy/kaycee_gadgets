@@ -1,110 +1,33 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<section class="products">
 
-header {
-    background: #111;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+<div class="card">
+<img src="assets/images/iphone15.jpg" alt="iPhone 15">
+<h3>iPhone 15</h3>
+<p>₦950,000</p>
+<button onclick="addToCart('iPhone 15',950000,'assets/images/iphone15.jpg')">Add to Cart</button>
+</div>
 
-nav a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-}
+<div class="card">
+<img src="assets/images/samsung-phone.jpg" alt="Samsung Galaxy S24">
+<h3>Samsung Galaxy S24</h3>
+<p>₦870,000</p>
+<button onclick="addToCart('Samsung Galaxy S24',870000,'assets/images/samsung-phone.jpg')">Add to Cart</button>
+</div>
 
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #f4f4f4;
-}
+<div class="card">
+<img src="assets/images/macbook.jpg" alt="MacBook Pro">
+<h3>MacBook Pro</h3>
+<p>₦1,200,000</p>
+<button onclick="addToCart('MacBook Pro',1200000,'assets/images/macbook.jpg')">Add to Cart</button>
+</div>
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: black;
-    color: white;
-    text-decoration: none;
-    margin-top: 10px;
-}
+<div class="card">
+<img src="assets/images/lenovo-laptop.jpg" alt="Lenovo ThinkPad">
+<h3>Lenovo ThinkPad</h3>
+<p>₦820,000</p>
+<button onclick="addToCart('Lenovo ThinkPad',820000,'assets/images/lenovo-laptop.jpg')">Add to Cart</button>
+</div>
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 40px;
-}
+</section>
 
-.card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-}
-
-.cart, .checkout {
-    padding: 40px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-body{
-background:#fafafa;
-}
-
-header{
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:8px;
-}
-
-.card{
-background:white;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-transition:transform 0.3s ease;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-button{
-background:black;
-color:white;
-border:none;
-padding:10px 16px;
-border-radius:6px;
-cursor:pointer;
-}
-
-button:hover{
-background:gold;
-color:black;
-}
-
-.badge{
-background:red;
-color:white;
-border-radius:50%;
-padding:3px 7px;
-font-size:12px;
-margin-left:5px;
-}
+<script src="js/cart.js"></script>
