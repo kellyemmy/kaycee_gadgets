@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.samsung, .ipone, .laptop {
+    width: 10rem;
+    height: 15rem;
+    background-color: skyblue;
+}

@@ -1,33 +1,73 @@
-<section class="products">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/product.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="window.location.href='/index.html'">Home</button>
+    <section class="products">
+      <div class="card">
+        <img src="assets/iphone15.jpg"  />
+        <h3>iPhone 15</h3>
+        <p>₦950000</p>
+        <button
+          onclick="addToCart('iPhone 15', 950000, 'assets/iphone15.jpg')"
+        >
+          Add to Cart
+        </button>
+      </div>
 
-<div class="card">
-<img src="assets/images/iphone15.jpg">
-<h3>iPhone 15</h3>
-<p>₦950000</p>
-<button onclick="addToCart('iPhone 15',950000,'assets/images/iphone15.jpg')">Add to Cart</button>
-</div>
+      <div class="card">
+        <img src="assets/samsung-phone.jpg" class="samsung" />
+        <h3>Samsung Galaxy S24</h3>
+        <p>₦870000</p>
+        <button
+          onclick="
+            addToCart(
+              'Samsung Galaxy S24',
+              870000,
+              'assets/samsung-phone.jpg',
+            )
+          "
+        >
+          Add to Cart
+        </button>
+      </div>
 
-<div class="card">
-<img src="assets/images/samsung-phone.jpg">
-<h3>Samsung Galaxy S24</h3>
-<p>₦870000</p>
-<button onclick="addToCart('Samsung Galaxy S24',870000,'assets/images/samsung-phone.jpg')">Add to Cart</button>
-</div>
+      <div class="card">
+        <img src="assets/macbook.jpg" />
+        <h3>MacBook Pro</h3>
+        <p>₦1,200,000</p>
+        <button
+          onclick="
+            addToCart('MacBook Pro', 1200000, 'assets/macbook.jpg')
+          "
+        >
+          Add to Cart
+        </button>
+      </div>
 
-<div class="card">
-<img src="assets/images/macbook.jpg">
-<h3>MacBook Pro</h3>
-<p>₦1,200,000</p>
-<button onclick="addToCart('MacBook Pro',1200000,'assets/images/macbook.jpg')">Add to Cart</button>
-</div>
+      <div class="card">
+        <img src="assets/images/lenovo-laptop.jpg" />
+        <h3>Lenovo ThinkPad</h3>
+        <p>₦820000</p>
+        <button
+          onclick="
+            addToCart(
+              'Lenovo ThinkPad',
+              820000,
+              'assets/images/lenovo-laptop.jpg',
+            )
+          "
+        >
+          Add to Cart
+        </button>
+      </div>
+    </section>
 
-<div class="card">
-<img src="assets/images/lenovo-laptop.jpg">
-<h3>Lenovo ThinkPad</h3>
-<p>₦820000</p>
-<button onclick="addToCart('Lenovo ThinkPad',820000,'assets/images/lenovo-laptop.jpg')">Add to Cart</button>
-</div>
-
-</section>
-
-<script src="js/cart.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
